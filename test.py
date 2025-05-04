@@ -11,7 +11,8 @@ import requests
 N_HOURS_DEFAULT = 24 
 MODEL_DIR = '.' 
 BASELINE_STATS_PATH = os.path.join(MODEL_DIR, 'baseline_stats.csv')
-PREDICTION_API_URL = "http://127.0.0.1:5000/predict" 
+PREDICTION_API_URL = os.environ.get('PREDICT_SERVICE_URL', "http://127.0.0.1:5000/predict")
+ 
 
 
 try:
